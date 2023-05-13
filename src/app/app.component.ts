@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Heroe } from './interfaces/heroe.interface';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'entendiendoOutput';
+  //Creamos un metodo donde mandamos a traer la variable del hijo.component.ts
+  public recibeNombre(nombre:string) {
+    console.log(nombre);
+    alert(nombre);
+    
+  }
+  public contenidoHeroes(heroes:Heroe[]){
+    alert(heroes);
+    console.log(heroes);
+    
+  }
 }
